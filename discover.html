@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop — MEDIANTEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ══ NAVBAR — wireframe: "Premium Socks" | Join Now | Log In ══════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Premium Socks</a>
+    <div class="nav-end" style="margin-left:auto">
+      <a href="#" class="btn-joinnow">Join Now</a>
+      <a href="#" class="btn-login">Log In</a>
+    </div>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="stack.html">Stack</a>
+    <a href="#">Join Now</a>
+    <a href="#">Log In</a>
+  </div>
+</nav>
+
+<!-- ══ BENEFITS BAR — wireframe: labels + "Buy Now" btn + cart icon ══════ -->
+<div class="benefits-bar-d">
+  <div class="bl">
+    <span>Limited-time offer</span>
+    <span>Soft and</span>
+    <span>Durable Materials</span>
+    <span>Stylish</span>
+    <span>Perfect Fit</span>
+    <span>Great for gifting</span>
+  </div>
+  <div class="ba">
+    <a href="#" class="b-buynow">Buy Now</a>
+    <span class="nav-cart">🛒</span>
+  </div>
+</div>
+
+<!-- ══ BACK LINK — wireframe: "← Go" ════════════════════════════════════ -->
+<div class="back-bar">
+  <a href="index.html">← Go</a>
+</div>
+
+<!-- ══ WHY CHOOSE BANNER — wireframe: banner con texto centrado ══════════ -->
+<div class="why-banner reveal">
+  <h2>Why Choose our Socks?</h2>
+</div>
+
+<!-- ══ BENEFITS CARDS — wireframe: "Benefits" + flechas + 6 cards ════════ -->
+<div class="section-block">
+  <div class="section-row-header">
+    <h3>Benefits</h3>
+    <div class="arr-wrap">
+      <button class="arr">&#8592;</button>
+      <button class="arr">&#8594;</button>
+    </div>
+  </div>
+  <div class="benefits-grid">
+    <div class="ben-card reveal">
+      <div class="ben-icon">👤</div>
+      <span class="ben-label">Customer</span>
+    </div>
+    <div class="ben-card reveal" data-delay="60">
+      <div class="ben-icon">⭐</div>
+      <span class="ben-label">Quality</span>
+    </div>
+    <div class="ben-card reveal" data-delay="120">
+      <div class="ben-icon">🎨</div>
+      <span class="ben-label">Style</span>
+    </div>
+    <div class="ben-card reveal" data-delay="180">
+      <div class="ben-icon">✨</div>
+      <span class="ben-label">Special</span>
+    </div>
+    <div class="ben-card reveal" data-delay="240">
+      <div class="ben-icon">😊</div>
+      <span class="ben-label">User</span>
+    </div>
+    <div class="ben-card reveal" data-delay="300">
+      <div class="ben-icon">⏱️</div>
+      <span class="ben-label">Limited Time</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ "See what others say" — wireframe: 5 productos con precio y estrella ══ -->
+<div class="section-block">
+  <div class="section-row-header">
+    <h3>See what others Say</h3>
+    <div class="arr-wrap">
+      <button class="arr">&#8592;</button>
+      <button class="arr">&#8594;</button>
+    </div>
+  </div>
+  <div class="prods-grid">
+
+    <!-- Stylish and Cozy (wireframe: primer producto con "Limit" badge) -->
+    <div class="p-card reveal">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Stylish and Cozy</span></div>
+        <span class="p-lim">Limit</span>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Stylish and Cozy</div>
+        <div class="p-meta">
+          <span class="p-rev">Save</span>
+          <span class="p-star">⏱</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="60">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Premium Merino</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Premium Merino Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">45</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$19.99</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="120">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Ultra-Soft Cotton</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Ultra-Soft Cotton Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">44</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$15.00</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="180">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Breathable Sports</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Breathable Sports Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">96</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$17.5</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="240">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Colorful Patterned</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Colorful Patterned Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">200</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$22.00</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ "Customer Favorites" — wireframe: fondo alternado + 5 productos ════ -->
+<div class="section-block-alt">
+  <div class="section-row-header">
+    <h3>Customer Favorites <span>👍</span></h3>
+    <div class="arr-wrap">
+      <button class="arr">&#8592;</button>
+      <button class="arr">&#8594;</button>
+    </div>
+  </div>
+  <div class="prods-grid">
+
+    <div class="p-card reveal">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Luxury Dress</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Luxury Dress Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">5</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$24.99</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="60">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Gift Set</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Gift Set of Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">44</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$49.99</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="120">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Thermal Winter</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Thermal Winter Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">60</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$29.99</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="180">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Compression</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Compression Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">4</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$18.00</div>
+      </div>
+    </div>
+
+    <div class="p-card reveal" data-delay="240">
+      <div class="p-img">
+        <div class="p-img-ph"><span>Ankle Socks</span></div>
+        <button class="p-wish" aria-label="Save">♡</button>
+      </div>
+      <div class="p-info">
+        <div class="p-name">Ankle Socks</div>
+        <div class="p-meta">
+          <span class="p-rev">15</span>
+          <span class="p-star">☆</span>
+        </div>
+        <div class="p-price">$12.50</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Premium</span>
+    <div class="footer-links">
+      <a href="#">Facebook</a>
+      <a href="#">Pinterest</a>
+      <a href="#">Snapchat</a>
+    </div>
+    <span class="footer-copy">© Premium Socks 2026</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

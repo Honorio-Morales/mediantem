@@ -1,383 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MEDIANTEM — Diseño que se pone</title>
-  <meta name="description" content="Calcetines de diseño original. Moda urbana. Direct to Consumer." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Socks — MEDIANTEM</title>
+  <meta name="description" content="Calcetines de diseño original. Moda urbana."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-  <!-- ── NAVBAR ─────────────────────────────────────────────────────────── -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">MEDIANTEM</a>
-      <ul class="nav-links">
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#products">Colección</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="#products" class="btn-nav">Shop Now</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ══ NAVBAR — wireframe: "Premium Socks" | "Shop Now" ══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Premium Socks</a>
+    <div class="nav-end" style="margin-left:auto">
+      <a href="discover.html" class="btn-shopnow-nav">Shop Now</a>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#about">Nosotros</a>
-      <a href="#products">Colección</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact">Contacto</a>
-      <a href="#products" class="btn-nav">Shop Now</a>
-    </div>
-  </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="discover.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="stack.html">Stack</a>
+  </div>
+</nav>
 
-  <!-- ── BENEFITS BAR ───────────────────────────────────────────────────── -->
-  <div class="benefits-bar">
-    <div class="benefits-track">
-      <span>✦ Oferta por tiempo limitado</span>
-      <span>✦ Materiales premium</span>
-      <span>✦ Diseños originales</span>
-      <span>✦ Envío a todo el país</span>
-      <span>✦ Talla perfecta garantizada</span>
-      <span>✦ Ideal para regalo</span>
-      <span>✦ Oferta por tiempo limitado</span>
-      <span>✦ Materiales premium</span>
-      <span>✦ Diseños originales</span>
-      <span>✦ Envío a todo el país</span>
-      <span>✦ Talla perfecta garantizada</span>
-      <span>✦ Ideal para regalo</span>
+<!-- ══ BENEFITS BAR — wireframe: ticker horizontal ══════════════════════ -->
+<div class="benefits-bar">
+  <div class="benefits-track">
+    <span>Limited-time offer</span><span class="sep">·</span>
+    <span>Soft and comfortable</span><span class="sep">·</span>
+    <span>Durable Materials</span><span class="sep">·</span>
+    <span>Stylish</span><span class="sep">·</span>
+    <span>Perfect Fit</span><span class="sep">·</span>
+    <span>Great for gifting</span><span class="sep">·</span>
+    <!-- duplicado para loop continuo -->
+    <span>Limited-time offer</span><span class="sep">·</span>
+    <span>Soft and comfortable</span><span class="sep">·</span>
+    <span>Durable Materials</span><span class="sep">·</span>
+    <span>Stylish</span><span class="sep">·</span>
+    <span>Perfect Fit</span><span class="sep">·</span>
+    <span>Great for gifting</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- ══ HERO — wireframe: título izq + imagen grande + offer card derecha ══ -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- Left -->
+    <div class="hero-content reveal">
+      <h1 class="hero-title">
+        Experience comfort and<br/>
+        style with our <span>premium</span>
+      </h1>
+      <p class="hero-sub">Choose from a variety of colors and patterns</p>
+      <div class="hero-ctas">
+        <a href="discover.html" class="btn-primary">Add to Cart</a>
+        <a href="about.html"    class="btn-ghost">Gift Options</a>
+      </div>
+      <!-- wireframe: 100+ | 50+ | 1,000+ -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">100<sup>+</sup></span>
+          <span class="stat-label">Styles</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">50<sup>+</sup></span>
+          <span class="stat-label">Colors</span>
+        </div>
+        <div class="stat-sep"></div>
+        <div class="stat">
+          <span class="stat-num">1,000<sup>+</sup></span>
+          <span class="stat-label">Happy customers</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: imagen + offer card (wireframe) -->
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <div class="hero-img-ph">
+          <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#16213E"/>
+            <line x1="0" y1="0" x2="400" y2="300" stroke="#E94560" stroke-width="1.5" opacity=".25"/>
+            <line x1="400" y1="0" x2="0" y2="300" stroke="#E94560" stroke-width="1.5" opacity=".25"/>
+            <rect x="140" y="90" width="120" height="120" rx="8" stroke="#E94560" stroke-width="1.5" opacity=".3" fill="none"/>
+            <line x1="140" y1="90" x2="260" y2="210" stroke="#E94560" stroke-width="1.5" opacity=".3"/>
+            <line x1="260" y1="90" x2="140" y2="210" stroke="#E94560" stroke-width="1.5" opacity=".3"/>
+            <text x="50%" y="88%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" font-weight="700" letter-spacing="2">foto del producto</text>
+          </svg>
+        </div>
+      </div>
+      <!-- wireframe: "Limited Only · Time left 4h 30m 45s · Buy Now · Learn More" -->
+      <div class="offer-card">
+        <div class="offer-top">
+          <div class="offer-limited">
+            Limited
+            <small>Only</small>
+          </div>
+          <div class="offer-timer">
+            <span class="offer-timer-label">Time left</span>
+            <div class="countdown">
+              <span id="cdH">04</span>h <span id="cdM">30</span>m <span id="cdS">45</span>s
+            </div>
+          </div>
+        </div>
+        <div class="offer-btns">
+          <a href="discover.html" class="offer-btn-main">Buy Now</a>
+          <a href="about.html"    class="offer-btn-ghost">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ INFLUENCERS — wireframe: "What our customers say" + 4 cards ════════ -->
+<section class="influencers">
+  <div class="container">
+    <h2>What our customers say</h2>
+    <div class="inf-grid">
+
+      <!-- Alice Johnson -->
+      <div class="inf-card reveal">
+        <div class="inf-thumb">
+          <div class="inf-thumb-inner">
+            <svg viewBox="0 0 200 150"><line x1="0" y1="0" x2="200" y2="150" stroke="#E94560" stroke-width="1"/><line x1="200" y1="0" x2="0" y2="150" stroke="#E94560" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="inf-body">
+          <div class="inf-header">
+            <div class="inf-avatar">AJ</div>
+            <div>
+              <div class="inf-name">Alice Johnson</div>
+              <div class="inf-handle">@SockLover</div>
+            </div>
+          </div>
+          <div class="inf-stats">
+            <span>Amazing quality · 5 stars</span>
+            <span>Followers 8,500</span>
+          </div>
+          <a href="#" class="inf-cta">Follow Us</a>
+        </div>
+        <div class="inf-previews">
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">+15</div>
+        </div>
+      </div>
+
+      <!-- Mark Thompson -->
+      <div class="inf-card reveal" data-delay="100">
+        <div class="inf-thumb">
+          <div class="inf-thumb-inner">
+            <svg viewBox="0 0 200 150"><line x1="0" y1="0" x2="200" y2="150" stroke="#E94560" stroke-width="1"/><line x1="200" y1="0" x2="0" y2="150" stroke="#E94560" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="inf-body">
+          <div class="inf-header">
+            <div class="inf-avatar">MT</div>
+            <div>
+              <div class="inf-name">Mark Thompson</div>
+              <div class="inf-handle">@SockEnthusiast</div>
+            </div>
+          </div>
+          <div class="inf-stats">
+            <span>Best socks ever! · 4½ stars</span>
+            <span>Limited offer 30% Off</span>
+          </div>
+          <a href="discover.html" class="inf-cta">Shop Now</a>
+        </div>
+        <div class="inf-previews">
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">Best</div>
+        </div>
+      </div>
+
+      <!-- Alex Johnson -->
+      <div class="inf-card reveal" data-delay="200">
+        <div class="inf-thumb">
+          <div class="inf-thumb-inner">
+            <svg viewBox="0 0 200 150"><line x1="0" y1="0" x2="200" y2="150" stroke="#E94560" stroke-width="1"/><line x1="200" y1="0" x2="0" y2="150" stroke="#E94560" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="inf-body">
+          <div class="inf-header">
+            <div class="inf-avatar">AJ</div>
+            <div>
+              <div class="inf-name">Alex Johnson</div>
+              <div class="inf-handle">@SockFan421</div>
+            </div>
+          </div>
+          <div class="inf-stats">
+            <span>Testimonials · Happy 5,000+</span>
+            <span>Over 100,000</span>
+          </div>
+          <a href="discover.html" class="inf-cta">Buy Now</a>
+        </div>
+        <div class="inf-previews">
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">Join</div>
+        </div>
+      </div>
+
+      <!-- Jamie Lee -->
+      <div class="inf-card reveal" data-delay="300">
+        <div class="inf-thumb">
+          <div class="inf-thumb-inner">
+            <svg viewBox="0 0 200 150"><line x1="0" y1="0" x2="200" y2="150" stroke="#E94560" stroke-width="1"/><line x1="200" y1="0" x2="0" y2="150" stroke="#E94560" stroke-width="1"/></svg>
+          </div>
+        </div>
+        <div class="inf-body">
+          <div class="inf-header">
+            <div class="inf-avatar">JL</div>
+            <div>
+              <div class="inf-name">Jamie Lee</div>
+              <div class="inf-handle">@SocksForLife</div>
+            </div>
+          </div>
+          <div class="inf-stats">
+            <span>Collections $4,250,000</span>
+            <span>Followers 42,845</span>
+          </div>
+          <a href="#" class="inf-cta">Get Yours</a>
+        </div>
+        <div class="inf-previews">
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">img</div>
+          <div class="inf-prev">Join</div>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-blob blob-1"></div>
-      <div class="hero-blob blob-2"></div>
-    </div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-tag">
-          <span class="dot"></span>
-          Nueva colección 2026
-        </div>
-        <h1 class="hero-title">
-          <span class="title-line line-1">EXPRESA</span>
-          <span class="title-line line-2">TU <em>ESTILO</em></span>
-          <span class="title-line line-3">CON CADA PASO</span>
-        </h1>
-        <p class="hero-sub">
-          Calcetines de diseño original para quienes no se conforman con lo genérico.
-          100+ estilos · 50+ colores · envío a todo el Perú.
-        </p>
-        <div class="hero-ctas">
-          <a href="#products" class="btn-primary">Ver colección</a>
-          <a href="#about" class="btn-ghost">Conocer la marca</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">100<sup>+</sup></span>
-            <span class="stat-label">Estilos</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">50<sup>+</sup></span>
-            <span class="stat-label">Colores</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">1K<sup>+</sup></span>
-            <span class="stat-label">Clientes felices</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="offer-card">
-          <div class="offer-badge">OFERTA LIMITADA</div>
-          <div class="offer-img-wrap">
-            <div class="offer-img-placeholder">
-              <svg viewBox="0 0 120 120" fill="none">
-                <rect width="120" height="120" rx="12" fill="#E94560" opacity=".1"/>
-                <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Bebas Neue" font-size="14" fill="#E94560">MEDIANTEM</text>
-                <text x="50%" y="68%" dominant-baseline="middle" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#999">Foto del producto</text>
-              </svg>
-            </div>
-          </div>
-          <div class="offer-info">
-            <span class="offer-label">Solo quedan</span>
-            <div class="countdown" id="countdown">
-              <div class="cd-unit"><span id="cd-h">04</span><small>h</small></div>
-              <div class="cd-sep">:</div>
-              <div class="cd-unit"><span id="cd-m">30</span><small>m</small></div>
-              <div class="cd-sep">:</div>
-              <div class="cd-unit"><span id="cd-s">00</span><small>s</small></div>
-            </div>
-          </div>
-          <div class="offer-actions">
-            <a href="#products" class="btn-offer">Comprar ahora</a>
-            <a href="#about" class="btn-offer-ghost">Ver más</a>
-          </div>
-        </div>
-
-        <div class="floating-tag tag-1">⭐ 4.9 / 5</div>
-        <div class="floating-tag tag-2">🎁 Gift options</div>
+<!-- ══ NEWSLETTER — wireframe: img izq + texto + email form derecha ═══════ -->
+<section class="newsletter">
+  <div class="nl-inner">
+    <!-- imagen placeholder (wireframe: imagen grande izquierda) -->
+    <div class="nl-img">
+      <div class="nl-img-ph">
+        <svg viewBox="0 0 300 400" fill="none">
+          <rect width="300" height="400" fill="#16213E"/>
+          <line x1="0" y1="0" x2="300" y2="400" stroke="#E94560" stroke-width="1.5" opacity=".2"/>
+          <line x1="300" y1="0" x2="0" y2="400" stroke="#E94560" stroke-width="1.5" opacity=".2"/>
+          <rect x="90" y="130" width="120" height="140" rx="8" stroke="#E94560" stroke-width="1.5" opacity=".25" fill="none"/>
+          <line x1="90" y1="130" x2="210" y2="270" stroke="#E94560" stroke-width="1.5" opacity=".25"/>
+          <line x1="210" y1="130" x2="90" y2="270" stroke="#E94560" stroke-width="1.5" opacity=".25"/>
+        </svg>
       </div>
     </div>
-  </section>
-
-  <!-- ── WHY CHOOSE ─────────────────────────────────────────────────────── -->
-  <section class="why" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">¿Por qué Mediantem?</span>
-        <h2 class="section-title">No son calcetines.<br/>Son una declaración.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card" data-delay="0">
-          <div class="why-icon">🎨</div>
-          <h3>Diseño original</h3>
-          <p>Cada patrón es creado por nuestro equipo o en colabo con artistas locales. Nada genérico.</p>
+    <!-- texto + form (wireframe) -->
+    <div class="nl-content reveal">
+      <h2>Experience the ultimate comfort and style with our premium socks. Limited-time offer available!</h2>
+      <form id="nlForm">
+        <div class="nl-row">
+          <input type="email" id="nlEmail" placeholder="Enter your e-mail here" required/>
+          <button type="submit" class="btn-primary">Subscribe</button>
         </div>
-        <div class="why-card" data-delay="100">
-          <div class="why-icon">🧶</div>
-          <h3>Materiales premium</h3>
-          <p>Algodón peinado de alta calidad. Transpirable, duradero y suave al tacto desde el primer uso.</p>
-        </div>
-        <div class="why-card" data-delay="200">
-          <div class="why-icon">⚡</div>
-          <h3>Ediciones limitadas</h3>
-          <p>Colecciones de stock reducido que convierten cada par en una pieza de colección.</p>
-        </div>
-        <div class="why-card" data-delay="300">
-          <div class="why-icon">🎁</div>
-          <h3>Perfecto para regalar</h3>
-          <p>Packaging cuidado y sets de regalo disponibles para cualquier ocasión especial.</p>
-        </div>
-        <div class="why-card" data-delay="400">
-          <div class="why-icon">🛡️</div>
-          <h3>Calidad garantizada</h3>
-          <p>Si no estás satisfecho, te devolvemos el dinero. Sin preguntas, sin complicaciones.</p>
-        </div>
-        <div class="why-card" data-delay="500">
-          <div class="why-icon">🚀</div>
-          <h3>Envío rápido</h3>
-          <p>Despacho en 24 horas a todo el Perú. Seguimiento en tiempo real de tu pedido.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PRODUCTS ───────────────────────────────────────────────────────── -->
-  <section class="products" id="products">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Colección actual</span>
-        <h2 class="section-title">Los más populares</h2>
-      </div>
-      <div class="products-grid">
-
-        <div class="product-card" data-delay="0">
-          <div class="product-img">
-            <div class="product-img-ph">
-              <span>Casual Urban</span>
-            </div>
-            <div class="product-badge">Popular</div>
-            <button class="wishlist-btn" aria-label="Guardar">♡</button>
-          </div>
-          <div class="product-info">
-            <h3>Casual Urban Pack</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="review-count">(45)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">S/. 19.99</span>
-              <span class="price-old">S/. 24.99</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-delay="100">
-          <div class="product-img">
-            <div class="product-img-ph">
-              <span>Merino Premium</span>
-            </div>
-            <div class="product-badge badge-limited">Limitado</div>
-            <button class="wishlist-btn" aria-label="Guardar">♡</button>
-          </div>
-          <div class="product-info">
-            <h3>Premium Merino Socks</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="review-count">(96)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">S/. 22.00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-delay="200">
-          <div class="product-img">
-            <div class="product-img-ph">
-              <span>Athletic Pro</span>
-            </div>
-            <button class="wishlist-btn" aria-label="Guardar">♡</button>
-          </div>
-          <div class="product-info">
-            <h3>Breathable Athletic</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="review-count">(60)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">S/. 17.50</span>
-              <span class="price-old">S/. 21.00</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card" data-delay="300">
-          <div class="product-img">
-            <div class="product-img-ph">
-              <span>Gift Set</span>
-            </div>
-            <div class="product-badge badge-new">Nuevo</div>
-            <button class="wishlist-btn" aria-label="Guardar">♡</button>
-          </div>
-          <div class="product-info">
-            <h3>Gift Set — 3 pares</h3>
-            <div class="product-rating">
-              <span class="stars">★★★★★</span>
-              <span class="review-count">(200)</span>
-            </div>
-            <div class="product-price">
-              <span class="price-current">S/. 49.99</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="products-cta">
-        <a href="#" class="btn-primary">Ver toda la colección</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ───────────────────────────────────────────────────── -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Lo que dicen</span>
-        <h2 class="section-title">Clientes reales,<br/>opiniones reales</h2>
-      </div>
-      <div class="reviews-grid">
-
-        <div class="review-card" data-delay="0">
-          <div class="review-header">
-            <div class="review-avatar">AJ</div>
-            <div>
-              <div class="review-name">Alex T.</div>
-              <div class="review-stars">★★★★★</div>
-            </div>
-          </div>
-          <h4 class="review-title">Comodidad excepcional</h4>
-          <p class="review-body">"Son increíblemente cómodos y duraderos. Los llevo todo el día y no noto nada. El diseño encima es increíble."</p>
-          <span class="review-date">Noviembre 2025</span>
-        </div>
-
-        <div class="review-card" data-delay="100">
-          <div class="review-header">
-            <div class="review-avatar">JL</div>
-            <div>
-              <div class="review-name">Jamie L.</div>
-              <div class="review-stars">★★★★★</div>
-            </div>
-          </div>
-          <h4 class="review-title">Los mejores calcetines</h4>
-          <p class="review-body">"Suaves, cálidos y el tallaje es perfecto. Ya llevo tres pedidos. No volvería a comprar otra marca."</p>
-          <span class="review-date">Noviembre 2025</span>
-        </div>
-
-        <div class="review-card review-card--featured" data-delay="200">
-          <div class="review-header">
-            <div class="review-avatar av-red">CR</div>
-            <div>
-              <div class="review-name">Chris R.</div>
-              <div class="review-stars">★★★★★</div>
-            </div>
-          </div>
-          <h4 class="review-title">Estilo y calidad juntos</h4>
-          <p class="review-body">"Me los pongo todos los días. Mis amigos siempre preguntan de dónde son. Mediantem es una marca que llegó para quedarse."</p>
-          <span class="review-date">Octubre 2025</span>
-        </div>
-
-        <div class="review-card" data-delay="300">
-          <div class="review-header">
-            <div class="review-avatar">MR</div>
-            <div>
-              <div class="review-name">María R.</div>
-              <div class="review-stars">★★★★★</div>
-            </div>
-          </div>
-          <h4 class="review-title">Perfecto para regalo</h4>
-          <p class="review-body">"Compré el gift set para el cumpleaños de mi pareja y quedó encantado. El packaging es muy bonito y los diseños únicos."</p>
-          <span class="review-date">Octubre 2025</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── NEWSLETTER ─────────────────────────────────────────────────────── -->
-  <section class="newsletter" id="contact">
-    <div class="newsletter-inner">
-      <div class="newsletter-text">
-        <span class="section-eyebrow" style="color:#E94560">Únete a la comunidad</span>
-        <h2>Sé el primero en ver<br/>las nuevas colecciones</h2>
-        <p>Ofertas exclusivas, lanzamientos anticipados y contenido de la marca directo en tu correo.</p>
-      </div>
-      <form class="newsletter-form" id="newsletterForm">
-        <div class="form-row">
-          <input type="email" id="emailInput" placeholder="tu@email.com" required />
-          <button type="submit" class="btn-primary">Suscribirme</button>
-        </div>
-        <p class="form-note">Sin spam. Puedes darte de baja cuando quieras.</p>
-        <div class="form-success" id="formSuccess">
-          ✓ ¡Listo! Te avisaremos cuando haya novedades.
-        </div>
+        <p class="nl-note">No spam. Unsubscribe any time.</p>
+        <div class="nl-ok" id="nlOk">✓ You're in! We'll keep you posted.</div>
       </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo">MEDIANTEM</span>
-        <p>Diseño que se pone.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">Pinterest</a>
-      </div>
-      <div class="footer-copy">
-        © 2026 Mediantem. Todos los derechos reservados.
-      </div>
+<!-- ══ FOOTER — wireframe: Premium · Facebook · Pinterest · Snapchat ══════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Premium</span>
+    <div class="footer-links">
+      <a href="#">Facebook</a>
+      <a href="#">Pinterest</a>
+      <a href="#">Snapchat</a>
     </div>
-  </footer>
+    <span class="footer-copy">© Premium Socks 2026</span>
+  </div>
+</footer>
 
-  <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

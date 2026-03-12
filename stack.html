@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stack Tecnológico — MEDIANTEM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ══ NAVBAR ════════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Premium Socks</a>
+    <nav class="nav-center">
+      <a href="index.html">Landing</a>
+      <a href="discover.html">Discover</a>
+      <a href="about.html">About</a>
+      <a href="stack.html" class="active">Stack</a>
+    </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Landing</a>
+    <a href="discover.html">Discover</a>
+    <a href="about.html">About</a>
+    <a href="stack.html">Stack</a>
+  </div>
+</nav>
+
+<div style="height:60px"></div>
+
+<!-- ══ HERO ════════════════════════════════════════════════════════════════ -->
+<section class="stack-hero">
+  <div class="eyebrow">Mediantem — Proyecto Académico</div>
+  <h1>Stack Tecnológico</h1>
+  <p>Arquitectura full stack propuesta para el desarrollo del e-commerce, foro de comunidad y panel de administración.</p>
+</section>
+
+<!-- ══ ARQUITECTURA ══════════════════════════════════════════════════════ -->
+<div class="stack-section">
+  <h2>Capas del sistema</h2>
+
+  <!-- FRONTEND -->
+  <div class="layer reveal">
+    <div class="layer-head">
+      <div class="l-dot fe"></div>
+      <h3>Frontend</h3>
+      <span class="l-badge fe">Capa de presentación</span>
+    </div>
+    <div class="layer-techs">
+      <div class="tech">
+        <div class="tech-ico">🚀</div>
+        <div>
+          <h4>Astro 4</h4>
+          <p>Framework principal. Genera HTML estático con hidratación selectiva (islas React). SEO perfecto sin JavaScript innecesario.</p>
+          <small>v4.x · SSR / SSG hybrid</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">⚛️</div>
+        <div>
+          <h4>React 18</h4>
+          <p>Componentes interactivos: carrito, countdown, carruseles, formularios de auth. Se monta solo cuando es necesario.</p>
+          <small>v18.x · client:visible / client:load</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🎨</div>
+        <div>
+          <h4>Tailwind CSS 3</h4>
+          <p>Sistema de estilos utility-first con la paleta de Mediantem definida en tailwind.config.mjs. Responsive mobile-first.</p>
+          <small>v3.x · JIT compiler</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🐻</div>
+        <div>
+          <h4>Zustand 4</h4>
+          <p>Estado global del cliente. Tres stores: cartStore, authStore, wishlistStore. Sin boilerplate.</p>
+          <small>v4.x · Estado en memoria</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🔷</div>
+        <div>
+          <h4>TypeScript 5</h4>
+          <p>Tipado estático en todo el frontend. Los tipos de Product, Order, User se definen en types/index.ts como fuente de verdad.</p>
+          <small>v5.x · strict mode</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">📦</div>
+        <div>
+          <h4>Vite</h4>
+          <p>Bundler de Astro. Build ultrarrápido con HMR en desarrollo. Genera assets optimizados para producción.</p>
+          <small>Incluido con Astro</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack-arrow">↓</div>
+
+  <!-- BACKEND -->
+  <div class="layer reveal" data-delay="100">
+    <div class="layer-head">
+      <div class="l-dot be"></div>
+      <h3>Backend</h3>
+      <span class="l-badge be">API REST · Puerto 3001</span>
+    </div>
+    <div class="layer-techs">
+      <div class="tech">
+        <div class="tech-ico">🟢</div>
+        <div>
+          <h4>Node.js 20 LTS</h4>
+          <p>Entorno de ejecución. Permite compartir lógica de validación entre frontend y backend al usar el mismo lenguaje.</p>
+          <small>v20.x LTS</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🚂</div>
+        <div>
+          <h4>Express 4</h4>
+          <p>Framework HTTP. Define los routers /api/auth, /api/products, /api/orders, /api/reviews, /api/forum, /api/stats.</p>
+          <small>v4.x · REST API</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🔐</div>
+        <div>
+          <h4>JWT + bcrypt</h4>
+          <p>Autenticación sin sesiones en servidor. Access token en memoria (15 min), refresh token en cookie HttpOnly (30 días).</p>
+          <small>jsonwebtoken v9 · bcrypt v5</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">✅</div>
+        <div>
+          <h4>Zod</h4>
+          <p>Validación de esquemas en todos los endpoints. Si el body no cumple el schema, responde 400 con errores detallados.</p>
+          <small>v3.x · Schema validation</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🛡️</div>
+        <div>
+          <h4>Helmet + CORS</h4>
+          <p>Helmet agrega headers de seguridad HTTP. CORS controla qué orígenes pueden consumir la API (solo el frontend URL).</p>
+          <small>Middlewares de seguridad</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">📝</div>
+        <div>
+          <h4>Morgan</h4>
+          <p>Logger HTTP de peticiones en desarrollo. Muestra método, path, status y tiempo de respuesta de cada request.</p>
+          <small>v1.x · Dev logging</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack-arrow">↓</div>
+
+  <!-- BASE DE DATOS -->
+  <div class="layer reveal" data-delay="200">
+    <div class="layer-head">
+      <div class="l-dot db"></div>
+      <h3>Base de datos</h3>
+      <span class="l-badge db">SQLite · mediantem.db</span>
+    </div>
+    <div class="layer-techs">
+      <div class="tech">
+        <div class="tech-ico">🗄️</div>
+        <div>
+          <h4>SQLite (better-sqlite3)</h4>
+          <p>Base de datos relacional embebida. Sin servidor externo, el archivo .db vive en el directorio del backend. Ideal para fase inicial.</p>
+          <small>better-sqlite3 v9.x · Síncrono</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🗂️</div>
+        <div>
+          <h4>Tablas principales</h4>
+          <p>users · products · product_variants · product_images · orders · order_items · reviews · forum_posts · wishlist · refresh_tokens</p>
+          <small>10 tablas · Migraciones SQL</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">🔄</div>
+        <div>
+          <h4>Transacciones</h4>
+          <p>La creación de pedidos usa transacciones SQLite: inserta order + order_items + descuenta stock en una sola operación atómica.</p>
+          <small>ACID · better-sqlite3 transactions</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stack-arrow">↓</div>
+
+  <!-- INFRAESTRUCTURA -->
+  <div class="layer reveal" data-delay="300">
+    <div class="layer-head">
+      <div class="l-dot inf"></div>
+      <h3>Servicios externos</h3>
+      <span class="l-badge inf">APIs de terceros</span>
+    </div>
+    <div class="layer-techs">
+      <div class="tech">
+        <div class="tech-ico">☁️</div>
+        <div>
+          <h4>Cloudinary</h4>
+          <p>CDN de imágenes de producto. Optimización automática (WebP, resize, quality) y URLs de entrega global con baja latencia.</p>
+          <small>Upload vía API · URLs públicas</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">📧</div>
+        <div>
+          <h4>Resend</h4>
+          <p>Emails transaccionales: confirmación de pedido, recuperación de contraseña. API simple, entregabilidad alta.</p>
+          <small>SMTP moderno · Templates HTML</small>
+        </div>
+      </div>
+      <div class="tech">
+        <div class="tech-ico">💳</div>
+        <div>
+          <h4>Culqi / Niubiz</h4>
+          <p>Pasarela de pago para Perú. Soporta tarjetas de crédito/débito, Yape y Plin. Se integra con un widget JS en el checkout.</p>
+          <small>Perú · Tarjetas · Yape · Plin</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PATRONES DE ARQUITECTURA ══════════════════════════════════════════ -->
+<div class="stack-section">
+  <h2>Patrones de arquitectura</h2>
+  <div class="patterns-grid">
+
+    <div class="pat-card reveal">
+      <h3>Frontend — Streaming Architecture</h3>
+      <pre><span class="fe-c">Page</span>       (Astro · SSR/SSG)
+<span class="cm-c">│  Hace fetch de datos en servidor</span>
+<span class="cm-c">│  Genera HTML estático</span>
+└── <span class="fe-c">Section</span>  (Astro · bloque estático)
+     <span class="cm-c">│  Sin estado, sin JS</span>
+     └── <span class="fe-c">Component</span> (React · isla)
+          <span class="cm-c">│  Con estado o eventos</span>
+          └── <span class="be-c">Store</span> (Zustand)
+               └── <span class="db-c">lib/api.ts</span> → API</pre>
+    </div>
+
+    <div class="pat-card reveal" data-delay="100">
+      <h3>Backend — MVC</h3>
+      <pre><span class="fe-c">Route</span>
+└── <span class="fe-c">Middleware</span>
+     <span class="cm-c">│  auth.js (verifica JWT)</span>
+     <span class="cm-c">│  isAdmin.js (verifica rol)</span>
+     <span class="cm-c">│  validate.js (Zod schema)</span>
+     └── <span class="be-c">Controller</span>
+          <span class="cm-c">│  Lógica de negocio</span>
+          <span class="cm-c">│  Nunca escribe SQL</span>
+          ├── <span class="db-c">Model</span> ← queries SQL
+          └── <span class="db-c">Service</span> ← APIs externas</pre>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ DEPLOY ════════════════════════════════════════════════════════════ -->
+<div class="stack-section">
+  <h2>Infraestructura de despliegue</h2>
+  <div class="deploy-grid">
+    <div class="dep-card reveal">
+      <div class="dep-icon">▲</div>
+      <div class="dep-name">Vercel</div>
+      <div class="dep-desc">Hosting del frontend Astro. Deploy automático desde rama <code>main</code> de GitHub. CDN global, HTTPS incluido.</div>
+    </div>
+    <div class="dep-card reveal" data-delay="100">
+      <div class="dep-icon">🚂</div>
+      <div class="dep-name">Railway</div>
+      <div class="dep-desc">Hosting del backend Node.js + Express con SQLite persistente. Variables de entorno configuradas en el dashboard.</div>
+    </div>
+    <div class="dep-card reveal" data-delay="200">
+      <div class="dep-icon">🌐</div>
+      <div class="dep-name">Dominio</div>
+      <div class="dep-desc"><code>mediantem.com</code> o <code>mediantem.pe</code> via Namecheap o NIC.pe con HTTPS via certificado SSL automático.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-logo">Premium</span>
+    <div class="footer-links">
+      <a href="index.html">Landing</a>
+      <a href="discover.html">Discover</a>
+      <a href="about.html">About</a>
+    </div>
+    <span class="footer-copy">© Premium Socks 2026 · Honorio · Marcir · Jose</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

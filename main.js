@@ -1,90 +1,85 @@
-// ── NAVBAR SCROLL ──────────────────────────────────────────────────────────
+/* ── NAVBAR SCROLL ─────────────────────────────────────────────────────── */
 const navbar = document.getElementById('navbar')
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40)
-})
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30)
+  })
+}
 
-// ── HAMBURGER MENU ─────────────────────────────────────────────────────────
+/* ── HAMBURGER ─────────────────────────────────────────────────────────── */
 const hamburger = document.getElementById('hamburger')
 const mobileMenu = document.getElementById('mobileMenu')
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open')
-  mobileMenu.classList.toggle('open')
-})
-// Cerrar al hacer click en un link
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open')
-    mobileMenu.classList.remove('open')
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open')
+    mobileMenu.classList.toggle('open')
   })
-})
-
-// ── COUNTDOWN TIMER ────────────────────────────────────────────────────────
-function startCountdown(hours, minutes, seconds) {
-  let total = hours * 3600 + minutes * 60 + seconds
-
-  const hEl = document.getElementById('cd-h')
-  const mEl = document.getElementById('cd-m')
-  const sEl = document.getElementById('cd-s')
-
-  function update() {
-    if (total <= 0) { total = 0 }
-    const h = Math.floor(total / 3600)
-    const m = Math.floor((total % 3600) / 60)
-    const s = total % 60
-    hEl.textContent = String(h).padStart(2, '0')
-    mEl.textContent = String(m).padStart(2, '0')
-    sEl.textContent = String(s).padStart(2, '0')
-    if (total > 0) { total--; setTimeout(update, 1000) }
-  }
-  update()
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open')
+      mobileMenu.classList.remove('open')
+    })
+  })
 }
-startCountdown(4, 30, 0)
 
-// ── SCROLL ANIMATIONS (IntersectionObserver) ───────────────────────────────
-const animatedEls = document.querySelectorAll('.why-card, .product-card, .review-card')
+/* ── COUNTDOWN (solo en index.html) ───────────────────────────────────── */
+const cdH = document.getElementById('cdH')
+const cdM = document.getElementById('cdM')
+const cdS = document.getElementById('cdS')
+if (cdH && cdM && cdS) {
+  let total = 4 * 3600 + 30 * 60 + 45
+  const tick = () => {
+    if (total <= 0) return
+    cdH.textContent = String(Math.floor(total / 3600)).padStart(2, '0')
+    cdM.textContent = String(Math.floor((total % 3600) / 60)).padStart(2, '0')
+    cdS.textContent = String(total % 60).padStart(2, '0')
+    total--
+    setTimeout(tick, 1000)
+  }
+  tick()
+}
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target
-      const delay = el.dataset.delay || 0
-      setTimeout(() => el.classList.add('visible'), Number(delay))
-      observer.unobserve(el)
-    }
-  })
-}, { threshold: 0.1 })
+/* ── REVEAL ON SCROLL ──────────────────────────────────────────────────── */
+const revealEls = document.querySelectorAll('.reveal')
+if (revealEls.length) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target
+        const delay = Number(el.dataset.delay || 0)
+        setTimeout(() => el.classList.add('visible'), delay)
+        obs.unobserve(el)
+      }
+    })
+  }, { threshold: 0.1 })
+  revealEls.forEach(el => obs.observe(el))
+}
 
-animatedEls.forEach(el => observer.observe(el))
-
-// ── WISHLIST TOGGLE ────────────────────────────────────────────────────────
-document.querySelectorAll('.wishlist-btn').forEach(btn => {
+/* ── WISHLIST TOGGLES ──────────────────────────────────────────────────── */
+document.querySelectorAll('.p-wish').forEach(btn => {
   btn.addEventListener('click', e => {
     e.stopPropagation()
-    const active = btn.classList.toggle('active')
-    btn.textContent = active ? '♥' : '♡'
+    const on = btn.classList.toggle('active')
+    btn.textContent = on ? '♥' : '♡'
   })
 })
 
-// ── NEWSLETTER FORM ────────────────────────────────────────────────────────
-const form    = document.getElementById('newsletterForm')
-const success = document.getElementById('formSuccess')
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  const email = document.getElementById('emailInput').value
-  if (!email) return
-
-  // Simulación — aquí irá la llamada real a la API
-  const btn = form.querySelector('button[type="submit"]')
-  btn.textContent = 'Enviando...'
-  btn.disabled = true
-
-  setTimeout(() => {
-    success.classList.add('show')
-    form.querySelector('.form-row').style.opacity = '.4'
-    form.querySelector('.form-row').style.pointerEvents = 'none'
-    btn.textContent = 'Suscribirme'
-    btn.disabled = false
-  }, 800)
-})
+/* ── NEWSLETTER FORM ───────────────────────────────────────────────────── */
+const nlForm = document.getElementById('nlForm')
+const nlOk   = document.getElementById('nlOk')
+if (nlForm && nlOk) {
+  nlForm.addEventListener('submit', e => {
+    e.preventDefault()
+    const btn = nlForm.querySelector('button[type="submit"]')
+    const row = nlForm.querySelector('.nl-row')
+    btn.textContent = 'Sending...'
+    btn.disabled = true
+    setTimeout(() => {
+      nlOk.classList.add('show')
+      row.style.opacity = '.4'
+      row.style.pointerEvents = 'none'
+      btn.textContent = 'Subscribe'
+      btn.disabled = false
+    }, 700)
+  })
+}
