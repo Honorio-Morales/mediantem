@@ -1,0 +1,22 @@
+---
+/**
+ * Badge — Etiquetas pequeñas: "Limited", "Sale", "New".
+ * Props: text, variant (red/black/gray)
+ */
+export interface Props {
+  text: string;
+  variant?: 'red' | 'black' | 'gray';
+}
+
+const { text, variant = 'red' } = Astro.props;
+
+const variantClasses = {
+  red: 'bg-brand-rojo text-white',
+  black: 'bg-brand-negro text-white',
+  gray: 'bg-brand-gris text-brand-negro',
+};
+---
+
+<span class={`inline-block font-display text-[.55rem] font-extrabold tracking-[.08em] uppercase py-[.18rem] px-2 rounded-sm ${variantClasses[variant]}`}>
+  {text}
+</span>

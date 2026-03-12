@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════════════════
+   MEDIANTEM — global.css
+   Variables CSS, reset, tipografía base
+   ═══════════════════════════════════════════════════════════ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-negro: #1A1A2E;
+    --color-brand-azul: #16213E;
+    --color-brand-rojo: #E94560;
+    --color-brand-rojo-dark: #c73550;
+    --color-brand-gris: #F0F0F0;
+    --color-blanco: #FFFFFF;
+    --color-texto: #333333;
+    --borde: rgba(255, 255, 255, 0.1);
+    --radius: 10px;
+    --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-negro text-white font-body leading-relaxed;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-negro);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-rojo);
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-[1200px] mx-auto px-8;
+  }
+}
+
+/* ─ Reveal animations ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─ Marquee animation for BenefitsBar ──────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

@@ -1,0 +1,58 @@
+---
+/**
+ * BenefitsBar — Franja horizontal de beneficios con ticker (marquee) animado.
+ * Wireframe: "Limited-time offer · Soft and · Durable Materials · Stylish · Perfect Fit · Great for gifting"
+ * + botón Buy Now a la derecha (variante con botones).
+ */
+export interface Props {
+  showButtons?: boolean;
+}
+
+const { showButtons = false } = Astro.props;
+
+const benefits = [
+  'Limited-time offer',
+  'Soft and comfortable',
+  'Durable Materials',
+  'Stylish',
+  'Perfect Fit',
+  'Great for gifting',
+];
+---
+
+{showButtons ? (
+  <div class="mt-[60px] bg-brand-rojo h-[38px] flex items-center justify-between px-6 gap-4 overflow-hidden">
+    <div class="flex gap-10 overflow-hidden">
+      {benefits.map((b) => (
+        <span class="font-display text-[.67rem] font-bold tracking-[.1em] uppercase whitespace-nowrap text-white">
+          {b}
+        </span>
+      ))}
+    </div>
+    <div class="flex gap-2 items-center flex-shrink-0">
+      <a
+        href="/shop"
+        class="bg-white text-brand-rojo font-display text-[.7rem] font-extrabold tracking-[.08em] uppercase py-[.32rem] px-4 rounded whitespace-nowrap hover:bg-brand-gris transition-colors"
+      >
+        Buy Now
+      </a>
+      <a href="/cart" class="text-white text-sm">🛒</a>
+    </div>
+  </div>
+) : (
+  <div class="mt-[60px] bg-brand-rojo h-[34px] overflow-hidden flex items-center">
+    <div
+      class="flex items-center gap-10 whitespace-nowrap"
+      style="animation: marquee 26s linear infinite;"
+    >
+      {[...benefits, ...benefits].map((b, i) => (
+        <>
+          <span class="font-display text-[.67rem] font-bold tracking-[.12em] uppercase flex-shrink-0 text-white">
+            {b}
+          </span>
+          <span class="opacity-50 text-white">·</span>
+        </>
+      ))}
+    </div>
+  </div>
+)}

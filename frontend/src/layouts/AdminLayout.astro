@@ -1,0 +1,46 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title?: string;
+}
+
+const { title = 'Admin — Mediantem' } = Astro.props;
+
+// TODO: In Stage 2, verify admin role before rendering
+// const user = await getAuthUser(Astro.request);
+// if (!user || user.role !== 'admin') return Astro.redirect('/');
+---
+
+<BaseLayout title={title}>
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-brand-azul border-r border-white/10 p-6 flex flex-col gap-2 fixed h-full">
+      <a href="/admin" class="font-display text-lg font-black text-white mb-6">
+        Mediantem <span class="text-brand-rojo text-xs font-bold uppercase tracking-wider">Admin</span>
+      </a>
+      <a href="/admin" class="text-sm font-display font-semibold text-white/60 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-colors">
+        Dashboard
+      </a>
+      <a href="/admin/products" class="text-sm font-display font-semibold text-white/60 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-colors">
+        Productos
+      </a>
+      <a href="/admin/orders" class="text-sm font-display font-semibold text-white/60 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-colors">
+        Pedidos
+      </a>
+      <a href="/admin/stats" class="text-sm font-display font-semibold text-white/60 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-colors">
+        Estadísticas
+      </a>
+      <div class="mt-auto">
+        <a href="/" class="text-xs font-display font-semibold text-white/30 hover:text-brand-rojo transition-colors">
+          ← Volver a la tienda
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div class="ml-64 flex-1 p-8">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

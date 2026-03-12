@@ -1,0 +1,23 @@
+{
+    "name": "mediantem-backend",
+    "version": "1.0.0",
+    "description": "Mediantem API — Express + SQLite",
+    "main": "server.js",
+    "scripts": {
+        "dev": "node --watch server.js",
+        "start": "node server.js",
+        "seed": "node src/config/seed.js"
+    },
+    "dependencies": {
+        "better-sqlite3": "^9.6.0",
+        "bcrypt": "^5.1.1",
+        "cors": "^2.8.5",
+        "express": "^4.21.0",
+        "helmet": "^7.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "zod": "^3.23.8",
+        "cookie-parser": "^1.4.6",
+        "dotenv": "^16.4.5"
+    }
+}

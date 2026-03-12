@@ -1,0 +1,44 @@
+---
+/**
+ * Button — Variantes: primary (rojo), secondary (negro), ghost (borde).
+ * Props: label, href, variant, disabled, class
+ */
+export interface Props {
+  label: string;
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'ghost';
+  disabled?: boolean;
+  class?: string;
+  type?: 'button' | 'submit';
+}
+
+const {
+  label,
+  href,
+  variant = 'primary',
+  disabled = false,
+  class: className = '',
+  type = 'button',
+} = Astro.props;
+
+const baseClasses = 'inline-flex items-center justify-center font-display text-[.82rem] font-bold tracking-[.04em] py-3 px-7 rounded-md transition-all duration-[220ms]';
+
+const variantClasses = {
+  primary: 'bg-brand-rojo text-white border-2 border-brand-rojo hover:bg-brand-rojo-dark hover:border-brand-rojo-dark hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(233,69,96,.35)]',
+  secondary: 'bg-brand-negro text-white border-2 border-brand-negro hover:bg-brand-azul',
+  ghost: 'bg-transparent text-white border-2 border-white/30 hover:border-white/70 hover:bg-white/[.06]',
+};
+
+const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : '';
+const classes = `${baseClasses} ${variantClasses[variant]} ${disabledClasses} ${className}`;
+---
+
+{href ? (
+  <a href={href} class={classes}>
+    {label}
+  </a>
+) : (
+  <button type={type} class={classes} disabled={disabled}>
+    {label}
+  </button>
+)}

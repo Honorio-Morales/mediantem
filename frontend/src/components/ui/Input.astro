@@ -1,0 +1,45 @@
+---
+/**
+ * Input — Input estilizado con label y mensaje de error.
+ * Props: name, label, type, placeholder, error
+ */
+export interface Props {
+  name: string;
+  label?: string;
+  type?: string;
+  placeholder?: string;
+  error?: string;
+  required?: boolean;
+}
+
+const {
+  name,
+  label,
+  type = 'text',
+  placeholder = '',
+  error,
+  required = false,
+} = Astro.props;
+---
+
+<div class="flex flex-col gap-1">
+  {label && (
+    <label for={name} class="font-display text-[.75rem] font-semibold text-white/70 tracking-wide">
+      {label}
+      {required && <span class="text-brand-rojo">*</span>}
+    </label>
+  )}
+  <input
+    type={type}
+    name={name}
+    id={name}
+    placeholder={placeholder}
+    required={required}
+    class={`bg-white/[.07] border rounded-md py-3 px-4 text-white font-body text-[.88rem] outline-none transition-colors placeholder:text-white/30 focus:border-brand-rojo ${error ? 'border-brand-rojo' : 'border-white/15'}`}
+  />
+  {error && (
+    <span class="text-brand-rojo text-[.72rem] font-display font-semibold">
+      {error}
+    </span>
+  )}
+</div>
